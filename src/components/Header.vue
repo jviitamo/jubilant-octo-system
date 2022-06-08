@@ -1,9 +1,9 @@
 <template>
  <div class="navcontainer">
     <div class="languageselector">
-        <div @click="toFI()">FI</div>
+        <div @click="toFI()" :style="[this.language === 'FI' ? 'text-decoration: underline' : '']">FI</div>
         <p>|</p>
-        <div @click="toEN()">EN</div>
+        <div @click="toEN()" :style="[this.language === 'EN' ? 'text-decoration: underline' : '']">EN</div>
     </div>
      <div class="container1">
         <p v-if="this.language === 'FI'">Hei!</p>
@@ -15,8 +15,8 @@
         <div class="links-container">
             <div class="images-container">
                 <a href="https://www.linkedin.com/in/juhana-viitamo/" target="a_blank"><img src="../assets/github.png" /></a>
-                <a href="https://www.linkedin.com/in/juhana-viitamo/" target="a_blank"><img src="../assets/linkedin.png" /></a>
-                <a href="https://www.linkedin.com/in/juhana-viitamo/" target="a_blank"> <img src="../assets/instagram.png" /></a>
+                <a href="https://github.com/jviitamo/" target="a_blank"><img src="../assets/linkedin.png" /></a>
+                <a href="https://www.instagram.com/juhanaviitamophotography/" target="a_blank"> <img src="../assets/instagram.png" /></a>
             </div>
             <div class="cv-link">
                 <a href="resume.pdf" download>
@@ -71,7 +71,7 @@ export default {
         margin: 0 10px;
     }
     .languageselector > div:hover {
-        text-decoration: underline;
+        opacity: 0.7;
     }
     .navcontainer {
         display: flex;
