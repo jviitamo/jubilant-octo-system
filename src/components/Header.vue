@@ -2,10 +2,10 @@
  <div class="navcontainer">
     <div class="languageselector">
         <div @click="toFI()" :style="[this.language === 'FI' ? 'text-decoration: underline' : '']">FI</div>
-        <p>|</p>
+        <div>|</div>
         <div @click="toEN()" :style="[this.language === 'EN' ? 'text-decoration: underline' : '']">EN</div>
     </div>
-     <div class="container1">
+     <div class="welcome-text">
         <p v-if="this.language === 'FI'">Hei!</p>
         <p v-if="this.language === 'EN'">Hello!</p>
      </div>
@@ -77,7 +77,8 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 100vh;
+        height: 100%;
+        min-height: 100%;   
         font-family: "Montserrat";
         background-image: url('../assets/bg4.jpg');
         background-repeat: no-repeat;
@@ -97,11 +98,11 @@ export default {
         flex-basis: 60%;
         font-size: 16px;
     }
-    .container1 {
+    .welcome-text {
         color: white;
         text-align: center;
         font-size: 70px;
-        height: 40vh;
+        height: 50vh;
     }
 
     .images-container {
@@ -134,6 +135,15 @@ export default {
         opacity: 0.7;
     }
 
+     @media screen and (min-width: 1300px) {
+         .description {
+             font-size: 24px;
+         }
+         .welcome-text {
+             font-size: 96px;
+         }
+     }
+
     @media screen and (max-width: 715px) {
         .navcontent {
             flex-direction: column;
@@ -142,16 +152,16 @@ export default {
         .links-container {
             margin-top: 30px;
         }
-        .container1 {
-            height: 20vh;
+        .welcome-text {
+            height: 35vh
         }
     }
     @media screen and (max-width: 450px) {
         .navcontent {
             margin: 0 10px;
         }
-        .container1 {
-            height: 15vh;
+        .welcome-text {
+            height: 25vh
         }
     }
 
