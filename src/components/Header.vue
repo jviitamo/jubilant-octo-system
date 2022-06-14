@@ -58,7 +58,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .languageselector {
-        position: fixed;
+        position: absolute;
         right: 15px;
         top: 15px;
         display: flex;
