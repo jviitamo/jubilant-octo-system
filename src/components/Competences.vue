@@ -149,5 +149,17 @@ export default {
           flex-wrap: wrap;
       }
     }
+    @media screen and (max-width: 800px) {
+      .competences {
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+      }
+    }
+    @media screen and (max-width: 450px) {
+        .competences-container {
+            margin: 0 10px;
+        }
+    }
 
 </style>

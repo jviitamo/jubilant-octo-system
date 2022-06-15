@@ -36,15 +36,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .ball {
-        border-radius: 50%;  
+        border-radius: 2em;  
         background-color: #FD703B;
-        height: 300px;
-        width: 300px;
+        height: 25vw;
+        width: 25vw;
         text-align: center;
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 30px;
     }
     .ball:hover {
         opacity: 0.7
@@ -84,6 +85,12 @@ export default {
       .overlay {
           height: 70%;
           width: 70%;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .ball {
+          width: 80%;
+          height: 100px;
       }
     }
     @media screen and (max-width: 600px) {
