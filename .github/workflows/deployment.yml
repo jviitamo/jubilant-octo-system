@@ -13,7 +13,7 @@ jobs:
       with:
         host: juhanaviitamo.fi
         username: jviitamo 
-        password: ${{ secrets.DEPLOYMENT_SECRET }} 
+        key: ${{ secrets.DEPLOYMENT_SECRET }} 
         port: 22
         script: |
           cd my-website
