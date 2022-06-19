@@ -10,16 +10,35 @@
             <input type="text" id="lname" name="lname">
         </form>
     </section>
+    <button @click="sendMail()">test</button>
 </template>
 
 <script>
+import axios from 'axios'
+
+
 /* eslint-disable */
 export default {
   name: 'FooterContainer',
   props: {
     msg: String
+  },
+  methods: {
+    sendMail() {
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/api/email/order-confirmation',
+            data: {
+                "name":"YourName", 
+                "orderNr": "12344", 
+                "toEmail": "jviitamo@gmail.com"
+            }
+        })
+        .then(data => console.log(data))
+    }
   }
 }
+    
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -31,7 +50,5 @@ export default {
     }
     .goodbye-text {
         flex-basis: 50%;
-    }
-    form {
     }
 </style>
