@@ -4,13 +4,15 @@
             <p>Thank you for visiting my website. If you have any questions, please contact me with the form on the side!</p>
         </div>
         <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
+            <label for="name">Name:</label><br>
+            <input type="text" v-model="name"><br>
+            <label for="content">Content:</label><br>
+            <input type="text" v-model="content"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" v-model="email">
         </form>
     </section>
-    <button @click="sendMail()">test</button>
+    <button @click="sendMail(this.name, this.content, this.email)">test</button>
 </template>
 
 <script>
@@ -20,18 +22,26 @@ import axios from 'axios'
 /* eslint-disable */
 export default {
   name: 'FooterContainer',
+  data() {
+    return {
+        name: "",
+        content: "",
+        email: ""
+    }
+  },
   props: {
     msg: String
   },
   methods: {
-    sendMail() {
+    sendMail(name, content, email) {
+        console.log(name, content, email)
         axios({
             method: 'post',
             url: 'http://localhost:3000/api/email/order-confirmation',
             data: {
-                "name":"YourName", 
-                "orderNr": "12344", 
-                "toEmail": "jviitamo@gmail.com"
+                "name": name, 
+                "orderNr": content, 
+                "toEmail": email
             }
         })
         .then(data => console.log(data))
