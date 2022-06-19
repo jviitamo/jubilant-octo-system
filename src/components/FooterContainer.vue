@@ -34,10 +34,9 @@ export default {
   },
   methods: {
     sendMail(name, content, email) {
-        console.log(name, content, email)
         axios({
             method: 'post',
-            url: 'http://localhost:3000/api/email/order-confirmation',
+            url: process.env.VUE_APP_API,
             data: {
                 "name": name, 
                 "orderNr": content, 
