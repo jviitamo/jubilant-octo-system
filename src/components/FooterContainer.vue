@@ -39,7 +39,7 @@ export default {
             url: process.env.VUE_APP_API,
             data: {
                 "name": name, 
-                "orderNr": content, 
+                "content": content, 
                 "toEmail": email
             }
         })
