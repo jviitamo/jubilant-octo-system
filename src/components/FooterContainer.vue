@@ -42,13 +42,13 @@ export default {
             }
         })
         .then(data => {
-            if (data.message.includes("Error sending order confirmation email or name")) {
-                this.showMessage = "Virhe viestin lähettämisessä"
-            } else this.showMessage = "Viesti lähetetty onnistuneesti"
+            if (data.data.message.includes("Error sending order confirmation email or name")) {
+                this.showMessage = "Incorrect email address"
+            } else this.showMessage = "Message sent successfully"
         })
         .catch(error => {
             console.log(error)
-            this.showMessage = "Virhe viestin lähettämisessä"
+            this.showMessage = "Something went from with making the request"
         }
         )
 
