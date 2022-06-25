@@ -1,17 +1,15 @@
 <template>
  <div class="navcontainer">
     <div class="languageselector">
-        <div @click="toFI()" :style="[this.language === 'FI' ? 'text-decoration: underline' : '']">FI</div>
+        <div @click="toFI()" :style="[this.language === 'fi' ? 'text-decoration: underline' : '']">FI</div>
         <div>|</div>
-        <div @click="toEN()" :style="[this.language === 'EN' ? 'text-decoration: underline' : '']">EN</div>
+        <div @click="toEN()" :style="[this.language === 'en' ? 'text-decoration: underline' : '']">EN</div>
     </div>
      <div class="welcome-text">
-        <p v-if="this.language === 'FI'">Hei!</p>
-        <p v-if="this.language === 'EN'">Hello!</p>
+        <p>{{ a("hello", this.language) }}</p>
      </div>
      <div class="navcontent">
-        <div v-if="this.language === 'FI'" class="description">Olen tuotantotalouden maisteripoiskelija Aalto-yliopistosta. Opiskelen pääaineessa Product and Innovation Management, ja tarkoitukseni on suunnata kohti tuotejohtamisen työtehtäviä. Pidän sekä tekniikasta että taloudesta, ja intohimoni on käyttää erilaisia työkaluja luodakseni arvoa asiakkaille.</div>
-        <div v-if="this.language === 'EN'" class="description">IEM MSc student majoring in product and innovation management. Interests in product development, software engineering and mathematical analysis. Passionate about using modern technologies and data to create better products. Aiming towards product management to create innovation, growth and direction for businesses.</div>
+        <div class="description">{{ a("description", this.language) }}</div>
         <div class="links-container">
             <div class="images-container">
                 <a href="https://www.linkedin.com/in/juhana-viitamo/" target="a_blank"><img src="../assets/github.png" /></a>
@@ -20,8 +18,7 @@
             </div>
             <div class="cv-link">
                 <a href="resume.pdf" download>
-                    <p v-if="this.language === 'FI'">Ansioluetteloni</p>
-                    <p v-if="this.language === 'EN'">My resume</p>
+                    <p>{{ a("cv", this.language) }}</p>
                 </a>
             </div>
         </div>
@@ -30,6 +27,8 @@
 </template>
 
 <script>
+
+import a from "../assets/accessLocalization"
 
 /* eslint-disable */
 export default {
@@ -40,17 +39,18 @@ export default {
   // state
   data() {
     return {
-      language: "FI"
+      language: "fi"
     }
   },
   // actions
   methods: {
     toEN() {
-      this.language = "EN"
+      this.language = "en"
     },
     toFI() {
-      this.language = "FI"
-    }
+      this.language = "fi"
+    },
+    a
   }
 }
 </script>
