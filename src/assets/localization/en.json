@@ -1,5 +1,7 @@
 {
     "hello": "Hello!",
     "description": "IEM MSc student majoring in product and innovation management. Interests in product development, software engineering and mathematical analysis. Passionate about using modern technologies and data to create better products. Aiming towards product management to create innovation, growth and direction for businesses.",
-    "cv": "My resume"
+    "cv": "My resume",
+    "software": "Software Development",
+    "consulting": "Consulting"
 }

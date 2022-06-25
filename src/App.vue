@@ -1,6 +1,6 @@
 <template>
-  <Header />
-  <Competences />
+  <Header @changeLanguage="this.changeLanguage" :lang="this.language" />
+  <Competences :lang="this.language" />
 </template>
 
 <script>
@@ -14,6 +14,18 @@ export default {
     Header,
     Competences
   },
+  // state
+  data() {
+    return {
+      language: "fi"
+    }
+  },
+  // actions
+  methods: {
+    changeLanguage(lang) {
+      this.language = lang
+    }
+  }
 }
 </script>
 

@@ -2,7 +2,7 @@
  <div class="navcontainer">
      <div class="competences-container">
         <section class="competences">
-            <CompetenceBall :msg="'Software Development'">
+            <CompetenceBall :msg="a('software', lang)">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </CompetenceBall>
-            <CompetenceBall :msg="'Consulting '">
+            <CompetenceBall :msg="a('consulting', lang)">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -60,6 +60,8 @@
 
 import CompetenceBall from './CompetenceBall.vue'
 import FooterContainer from './FooterContainer.vue'
+import a from "../assets/accessLocalization"
+
 
 /* eslint-disable */
 export default {
@@ -69,7 +71,7 @@ export default {
       FooterContainer
   },
   props: {
-    msg: String
+    lang: String
   },
   // state
   data() {
@@ -81,7 +83,8 @@ export default {
   methods: {
     showPopup() {
       this.Popup = !this.Popup
-    }
+    },
+    a
   }
 }
 </script>

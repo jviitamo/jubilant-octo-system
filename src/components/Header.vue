@@ -1,15 +1,15 @@
 <template>
  <div class="navcontainer">
     <div class="languageselector">
-        <div @click="toFI()" :style="[this.language === 'fi' ? 'text-decoration: underline' : '']">FI</div>
+        <div @click="$emit('changeLanguage', 'fi')" :style="[lang === 'fi' ? 'text-decoration: underline' : '']">FI</div>
         <div>|</div>
-        <div @click="toEN()" :style="[this.language === 'en' ? 'text-decoration: underline' : '']">EN</div>
+        <div @click="$emit('changeLanguage', 'en')" :style="[lang === 'en' ? 'text-decoration: underline' : '']">EN</div>
     </div>
      <div class="welcome-text">
-        <p>{{ a("hello", this.language) }}</p>
+        <p>{{ a("hello", lang) }}</p>
      </div>
      <div class="navcontent">
-        <div class="description">{{ a("description", this.language) }}</div>
+        <div class="description">{{ a("description", lang) }}</div>
         <div class="links-container">
             <div class="images-container">
                 <a href="https://www.linkedin.com/in/juhana-viitamo/" target="a_blank"><img src="../assets/github.png" /></a>
@@ -18,7 +18,7 @@
             </div>
             <div class="cv-link">
                 <a href="resume.pdf" download>
-                    <p>{{ a("cv", this.language) }}</p>
+                    <p>{{ a("cv", lang) }}</p>
                 </a>
             </div>
         </div>
@@ -34,22 +34,10 @@ import a from "../assets/accessLocalization"
 export default {
   name: 'Header',
   props: {
-    msg: String
-  },
-  // state
-  data() {
-    return {
-      language: "fi"
-    }
+    lang: String
   },
   // actions
   methods: {
-    toEN() {
-      this.language = "en"
-    },
-    toFI() {
-      this.language = "fi"
-    },
     a
   }
 }
