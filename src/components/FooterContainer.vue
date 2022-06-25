@@ -104,8 +104,19 @@ export default {
 
     @media screen and (max-width: 800px) {
         .footer {
-            flex-direction: column;
             width: 80%;
+            flex-direction: column;
+        }
+    }
+     @media screen and (max-width: 600px) {
+        input {
+            padding: 10px;
+        }
+        form * {
+            font-size: 12px;
+        }
+        .footer {
+            font-size: 18px;
         }
     }
 </style>
