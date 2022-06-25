@@ -98,6 +98,10 @@ export default {
           height: 80%;
           width: 90%;
       }
+      .ball {
+          width: 80%;
+          height: 70px;
+      }
     }
 
 </style>
