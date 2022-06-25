@@ -42,8 +42,9 @@ export default {
             }
         })
         .then(data => {
-            console.log(data)
-            this.showMessage = "Viesti lähetetty onnistuneesti"
+            if (data.message.includes("Error sending order confirmation email or name")) {
+                this.showMessage = "Virhe viestin lähettämisessä"
+            } else this.showMessage = "Viesti lähetetty onnistuneesti"
         })
         .catch(error => {
             console.log(error)
