@@ -4,20 +4,17 @@
             <p>Thank you for visiting my website. If you have any questions, please contact me with the form on the side!</p>
         </div>
         <form>
-            <label for="name">Name:</label><br>
-            <input type="text" v-model="name"><br>
-            <label for="content">Content:</label><br>
-            <input type="text" v-model="content"><br>
-            <label for="email">Email:</label><br>
-            <input type="text" v-model="email">
+            <input type="text" v-model="name" placeholder="Name"><br>
+            <input type="text" v-model="content" placeholder="Content"><br>
+            <input type="text" v-model="email" placeholder="Email">
+            <button @click.prevent="sendMail(this.name, this.content, this.email)">Send mail</button>
+            <p>{{ this.showMessage }}</p>
         </form>
     </section>
-    <button @click="sendMail(this.name, this.content, this.email)">test</button>
 </template>
 
 <script>
 import axios from 'axios'
-
 
 /* eslint-disable */
 export default {
@@ -26,7 +23,8 @@ export default {
     return {
         name: "",
         content: "",
-        email: ""
+        email: "",
+        showMessage: ""
     }
   },
   props: {
@@ -43,7 +41,22 @@ export default {
                 "toEmail": email
             }
         })
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            this.showMessage = "Viesti lähetetty onnistuneesti"
+        })
+        .catch(error => {
+            console.log(error)
+            this.showMessage = "Virhe viestin lähettämisessä"
+        }
+        )
+
+    this.name = ""
+    this.content = ""
+    this.email = ""
+    setTimeout(() => {
+        this.showMessage = ""
+    }, 5000);
     }
   }
 }
@@ -56,8 +69,43 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        width: 100%;
+        font-size: 24px;
     }
     .goodbye-text {
-        flex-basis: 50%;
+        flex-basis: 40%;
+    }
+    form {
+        flex-basis: 40%;
+        width: 100%;
+    }
+    form *{
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px;
+        font-size: 18px;
+    }
+    button {
+        padding: 1em;
+        border-radius: 10px;
+        background-color: #FDCA3B;
+        border: 0;
+        color: black;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: 0.7;
+    }
+    input {
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    @media screen and (max-width: 800px) {
+        .footer {
+            flex-direction: column;
+            width: 80%;
+        }
     }
 </style>
