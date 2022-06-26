@@ -6,10 +6,10 @@
         <div @click="$emit('changeLanguage', 'en')" :style="[lang === 'en' ? 'text-decoration: underline' : '']">EN</div>
     </div>
      <div class="welcome-text">
-        <p>{{ a("hello", lang) }}</p>
+        <p>{{ a("header", "hello", lang) }}</p>
      </div>
      <div class="navcontent">
-        <div class="description">{{ a("description", lang) }}</div>
+        <div class="description">{{ a("header", "description", lang) }}</div>
         <div class="links-container">
             <div class="images-container">
                 <a href="https://www.linkedin.com/in/juhana-viitamo/" target="a_blank"><img src="../assets/github.png" /></a>
@@ -18,7 +18,7 @@
             </div>
             <div class="cv-link">
                 <a href="resume.pdf" download>
-                    <p>{{ a("cv", lang) }}</p>
+                    <p>{{ a("header", "cv", lang) }}</p>
                 </a>
             </div>
         </div>

@@ -1,13 +1,13 @@
 <template>
     <section class="footer">
         <div class="goodbye-text">
-            <p>Thank you for visiting my website. If you have any questions, please contact me with the form on the side!</p>
+            <p>{{ a('footer', 'goodbye-text', lang) }}</p>
         </div>
         <form>
-            <input type="text" v-model="name" placeholder="Name"><br>
-            <input type="text" v-model="content" placeholder="Content"><br>
-            <input type="text" v-model="email" placeholder="Email">
-            <button @click.prevent="sendMail(this.name, this.content, this.email)">Send mail</button>
+            <input type="text" v-model="name" :placeholder="a('footer', 'name', lang)"><br>
+            <input type="text" v-model="content" :placeholder="a('footer', 'content', lang)"><br>
+            <input type="text" v-model="email" :placeholder="a('footer', 'email', lang)">
+            <button @click.prevent="sendMail(this.name, this.content, this.email)">{{ a('footer', 'sendmail', lang) }}</button>
             <p>{{ this.showMessage }}</p>
         </form>
     </section>
@@ -15,6 +15,7 @@
 
 <script>
 import axios from 'axios'
+import a from "../assets/accessLocalization"
 
 /* eslint-disable */
 export default {
@@ -28,7 +29,7 @@ export default {
     }
   },
   props: {
-    msg: String
+    lang: String
   },
   methods: {
     sendMail(name, content, email) {
@@ -58,7 +59,8 @@ export default {
     setTimeout(() => {
         this.showMessage = ""
     }, 5000);
-    }
+    },
+    a
   }
 }
     

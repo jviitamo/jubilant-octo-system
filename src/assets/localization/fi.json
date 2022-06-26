@@ -1,7 +1,18 @@
 {
-    "hello": "Hei!",
-    "description": "Olen tuotantotalouden maisteripoiskelija Aalto-yliopistosta. Opiskelen pääaineessa Product and Innovation Management, ja tarkoitukseni on suunnata kohti tuotejohtamisen työtehtäviä. Pidän sekä tekniikasta että taloudesta, ja intohimoni on käyttää erilaisia työkaluja luodakseni arvoa asiakkaille.",
-    "cv": "Ansioluetteloni",
-    "software": "Ohjelmistokehitys",
-    "consulting": "Konsultointi"
+    "header": {
+        "hello": "Hei!",
+        "description": "Olen tuotantotalouden maisteripoiskelija Aalto-yliopistosta. Opiskelen pääaineessa Product and Innovation Management, ja tarkoitukseni on suunnata kohti tuotejohtamisen työtehtäviä. Pidän sekä tekniikasta että taloudesta, ja intohimoni on käyttää erilaisia työkaluja luodakseni arvoa asiakkaille.",
+        "cv": "Ansioluetteloni"
+    },
+    "content": {
+        "software": "Ohjelmistokehitys",
+        "consulting": "Konsultointi"
+    },
+    "footer": {
+        "goodbye-text": "Kiitos että vierailit sivuillani. Jos olet kiinnostunut yhteistyöstä, otathan yhteyttä lomakkeella.",
+        "name": "Nimi",
+        "content": "Sisältö",
+        "email": "Sähköposti",
+        "sendmail": "Lähetä"
+    }
 }

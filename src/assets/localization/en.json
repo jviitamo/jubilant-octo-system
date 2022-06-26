@@ -1,7 +1,18 @@
 {
-    "hello": "Hello!",
-    "description": "IEM MSc student majoring in product and innovation management. Interests in product development, software engineering and mathematical analysis. Passionate about using modern technologies and data to create better products. Aiming towards product management to create innovation, growth and direction for businesses.",
-    "cv": "My resume",
-    "software": "Software Development",
-    "consulting": "Consulting"
+    "header": {
+        "hello": "Hello!",
+        "description": "IEM MSc student majoring in product and innovation management. Interests in product development, software engineering and mathematical analysis. Passionate about using modern technologies and data to create better products. Aiming towards product management to create innovation, growth and direction for businesses.",
+        "cv": "My resume"
+    },
+    "content": {
+        "software": "Software Development",
+        "consulting": "Consulting"
+    },
+    "footer": {
+        "goodbye-text": "Thank you for visiting my website. If you have any questions, please contact me with the form on the side!",
+        "name": "name",
+        "content": "content",
+        "email": "email",
+        "sendmail": "Send mail"
+    }
 }

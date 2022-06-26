@@ -2,7 +2,7 @@
  <div class="navcontainer">
      <div class="competences-container">
         <section class="competences">
-            <CompetenceBall :msg="a('software', lang)">
+            <CompetenceBall :msg="a('content', 'software', lang)">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </CompetenceBall>
-            <CompetenceBall :msg="a('consulting', lang)">
+            <CompetenceBall :msg="a('content', 'consulting', lang)">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -51,7 +51,7 @@
                 </div>
             </CompetenceBall>
         </section>
-        <FooterContainer />
+        <FooterContainer :lang="lang"/>
      </div>
  </div>
 </template>
