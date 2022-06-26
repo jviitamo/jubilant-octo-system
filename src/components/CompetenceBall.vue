@@ -38,8 +38,8 @@ export default {
     .ball {
         border-radius: 2em;  
         background-color: #FD703B;
-        height: 25vw;
-        width: 25vw;
+        height: 10vw;
+        width: 20vw;
         text-align: center;
         color: white;
         display: flex;

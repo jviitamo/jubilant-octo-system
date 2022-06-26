@@ -1,6 +1,7 @@
 <template>
  <div class="navcontainer">
      <div class="competences-container">
+        <p>{{ a('content', 'competences', lang) }}</p>
         <section class="competences">
             <CompetenceBall :msg="a('content', 'software', lang)">
                 <div class="ballcontent">
@@ -34,7 +35,7 @@
                     </div>
                 </div>
             </CompetenceBall>
-            <CompetenceBall :msg="'Servers'">
+            <CompetenceBall :msg="a('content', 'servers', lang)">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -51,7 +52,6 @@
                 </div>
             </CompetenceBall>
         </section>
-        <FooterContainer :lang="lang"/>
      </div>
  </div>
 </template>
@@ -97,9 +97,6 @@ export default {
         height: 100%;
         min-height: 100%;   
         font-family: "Montserrat";
-        background-image: url('../assets/bg4.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     .competences-container {
         background-color: white;
@@ -110,11 +107,16 @@ export default {
         justify-content: space-around;
         height: 100%;
     }
+    .competences-container > p {
+       font-size: 36px;
+       margin-top: 50px;
+       margin-bottom: 50px;
+    }
     .competences {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 100%;
+        width: 90%;
     }
     .ballcontent {
         display: flex;

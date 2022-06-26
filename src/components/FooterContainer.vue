@@ -1,15 +1,17 @@
 <template>
     <section class="footer">
-        <div class="goodbye-text">
-            <p>{{ a('footer', 'goodbye-text', lang) }}</p>
+        <div class="footer-container">
+            <div class="goodbye-text">
+                <p>{{ a('footer', 'goodbye-text', lang) }}</p>
+            </div>
+            <form>
+                <input type="text" v-model="name" :placeholder="a('footer', 'name', lang)"><br>
+                <input type="text" v-model="content" :placeholder="a('footer', 'content', lang)"><br>
+                <input type="text" v-model="email" :placeholder="a('footer', 'email', lang)">
+                <button @click.prevent="sendMail(this.name, this.content, this.email)">{{ a('footer', 'sendmail', lang) }}</button>
+                <p>{{ this.showMessage }}</p>
+            </form>
         </div>
-        <form>
-            <input type="text" v-model="name" :placeholder="a('footer', 'name', lang)"><br>
-            <input type="text" v-model="content" :placeholder="a('footer', 'content', lang)"><br>
-            <input type="text" v-model="email" :placeholder="a('footer', 'email', lang)">
-            <button @click.prevent="sendMail(this.name, this.content, this.email)">{{ a('footer', 'sendmail', lang) }}</button>
-            <p>{{ this.showMessage }}</p>
-        </form>
     </section>
 </template>
 
@@ -69,11 +71,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .footer {
+        font-size: 24px;
+        margin: 0 50px;
+        background-color: white;
+        font-family: "Montserrat";
+    }
+    .footer-container {
+        padding-top: 150px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 100%;
-        font-size: 24px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .goodbye-text {
         flex-basis: 40%;
@@ -81,6 +91,7 @@ export default {
     form {
         flex-basis: 40%;
         width: 100%;
+        margin-bottom: 150px;
     }
     form *{
         width: 100%;
@@ -106,8 +117,7 @@ export default {
     }
 
     @media screen and (max-width: 800px) {
-        .footer {
-            width: 80%;
+        .footer-container {
             flex-direction: column;
         }
     }
@@ -120,6 +130,11 @@ export default {
         }
         .footer {
             font-size: 18px;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .footer {
+            margin: 0 10px;
         }
     }
 </style>

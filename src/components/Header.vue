@@ -65,12 +65,9 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 100%;
-        min-height: 100%;   
+        height: 100vh;
+        min-height: 100vh;   
         font-family: "Montserrat";
-        background-image: url('../assets/bg4.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     .navcontent {
         background-color: white;

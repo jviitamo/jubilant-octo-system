@@ -6,7 +6,9 @@
     },
     "content": {
         "software": "Ohjelmistokehitys",
-        "consulting": "Konsultointi"
+        "consulting": "Konsultointi",
+        "servers": "Palvelimet",
+        "competences": "Osaamisalueeni"
     },
     "footer": {
         "goodbye-text": "Kiitos että vierailit sivuillani. Jos olet kiinnostunut yhteistyöstä, otathan yhteyttä lomakkeella.",
