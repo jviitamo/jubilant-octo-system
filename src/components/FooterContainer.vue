@@ -72,7 +72,7 @@ export default {
 <style scoped>
     .footer {
         font-size: 24px;
-        margin: 0 50px;
+        margin: 0 150px;
         background-color: white;
         font-family: "Montserrat";
     }
@@ -116,6 +116,12 @@ export default {
         border: 1px solid black;
     }
 
+    @media screen and (max-width: 1000px) {
+        .footer {
+            margin: 0 80px;
+        }     
+    }
+
     @media screen and (max-width: 800px) {
         .footer-container {
             flex-direction: column;
@@ -141,7 +147,7 @@ export default {
             font-size: 18px;
         }
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 650px) {
         .footer {
             margin: 0 10px;
         }

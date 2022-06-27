@@ -1,5 +1,5 @@
 <template>
-    <div class="ball" @click="showPopup()">
+    <div class="ball" :style="{backgroundColor: color}" @click="showPopup()">
       <p>{{ msg }}</p>
     </div> 
     <div class="overlay-container" :style="[!this.Popup ? 'display: none' : '']">
@@ -16,6 +16,7 @@
 export default {
   name: 'CompetenceBall',
   props: {
+    color: String,
     msg: String
   },
   // state
@@ -37,9 +38,8 @@ export default {
 <style scoped>
     .ball {
         border-radius: 2em;  
-        background-color: #FD703B;
         height: 10vw;
-        width: 20vw;
+        width: 30vw;
         text-align: center;
         color: white;
         display: flex;
@@ -50,6 +50,10 @@ export default {
     }
     .ball:hover {
         opacity: 0.7
+    }
+
+    .ball > p {
+      font-size: 24px;
     }
     .overlay-container {
         position: fixed;
@@ -102,6 +106,9 @@ export default {
       .ball {
           width: 80%;
           height: 70px;
+      }
+      .ball > p {
+        font-size: 16px;
       }
     }
 

@@ -74,7 +74,7 @@ export default {
         display: flex;
         flex-direction: row;
         padding: 30px 70px;
-        margin: 0 50px;
+        margin: 0 150px;
         align-items: center;
         justify-content: space-around;
     }
@@ -134,6 +134,12 @@ export default {
          }
      }
 
+     @media screen and (max-width: 1000px) {
+        .navcontent {
+            margin: 0 80px;
+        }     
+    }
+
     @media screen and (max-width: 715px) {
         .navcontent {
             flex-direction: column;
@@ -146,7 +152,7 @@ export default {
             height: 35vh
         }
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 650px) {
         .navcontent {
             margin: 0 10px;
         }

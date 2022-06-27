@@ -3,7 +3,7 @@
      <div class="competences-container">
         <p>{{ a('content', 'competences', lang) }}</p>
         <section class="competences">
-            <CompetenceBall :msg="a('content', 'software', lang)">
+            <CompetenceBall :msg="a('content', 'software', lang)" color="#145364">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </CompetenceBall>
-            <CompetenceBall :msg="a('content', 'consulting', lang)">
+            <CompetenceBall :msg="a('content', 'consulting', lang)" color="#FD703B">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </CompetenceBall>
-            <CompetenceBall :msg="a('content', 'servers', lang)">
+            <CompetenceBall :msg="a('content', 'servers', lang)" color="#fd9a3b">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </CompetenceBall>
-            <CompetenceBall :msg="a('content', 'photography', lang)">
+            <CompetenceBall :msg="a('content', 'photography', lang)" color="#FDCA3B">
                 <div class="ballcontent">
                     <div class="description-text">
                         <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
@@ -119,7 +119,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 50px;
+        margin: 0 150px;
         justify-content: space-around;
         height: 100%;
     }
@@ -133,6 +133,7 @@ export default {
         flex-direction: row;
         justify-content: space-around;
         width: 90%;
+        flex-wrap: wrap;
     }
     .ballcontent {
         display: flex;
@@ -177,7 +178,12 @@ export default {
           justify-content: space-between;
       }
     }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 1000px) {
+        .competences-container {
+            margin: 0 80px;
+        }     
+    }
+    @media screen and (max-width: 650px) {
         .competences-container {
             margin: 0 10px;
         }
