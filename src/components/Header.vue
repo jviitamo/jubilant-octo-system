@@ -66,7 +66,6 @@ export default {
         flex-direction: column;
         justify-content: flex-end;
         height: 100vh;
-        min-height: 100vh;   
         font-family: "Montserrat";
     }
     .navcontent {
@@ -118,6 +117,12 @@ export default {
     }
     .cv-link:hover {
         opacity: 0.7;
+    }
+
+    @media only screen and (max-device-width: 480px){
+       .navcontainer {
+            height: calc(100vh - 80px);
+        }
     }
 
      @media screen and (min-width: 1300px) {

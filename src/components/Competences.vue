@@ -109,7 +109,7 @@ export default {
     }
     .competences-container > p {
        font-size: 36px;
-       margin-top: 50px;
+       margin-top: 80px;
        margin-bottom: 50px;
     }
     .competences {
