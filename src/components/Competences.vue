@@ -51,6 +51,22 @@
                     </div>
                 </div>
             </CompetenceBall>
+            <CompetenceBall :msg="a('content', 'photography', lang)">
+                <div class="ballcontent">
+                    <div class="description-text">
+                        <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
+                        <p>I have been coding backend with Java, Kotlin and Scala. On the other hand I fluent with React and Vue.</p>
+                        <p>My work experience around software development includes CTO position at my student guild and IT-consultant at Oikeat Oliot Oy.</p>
+                    </div>
+                    <div class="languages-container">
+                        <p>Vue</p>
+                        <p>React</p>
+                        <p>Kotlin/Java</p>
+                        <p>Scala</p>
+                        <p>Python</p>
+                    </div>
+                </div>
+            </CompetenceBall>
         </section>
      </div>
  </div>

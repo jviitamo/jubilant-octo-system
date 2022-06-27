@@ -46,6 +46,7 @@ export default {
         justify-content: center;
         align-items: center;
         margin-top: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
     }
     .ball:hover {
         opacity: 0.7

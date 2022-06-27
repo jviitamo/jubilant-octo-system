@@ -119,6 +119,15 @@ export default {
     @media screen and (max-width: 800px) {
         .footer-container {
             flex-direction: column;
+            padding-top: 50px;
+        }
+        form {
+            flex-basis: 40%;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        p {
+            text-align: center;
         }
     }
      @media screen and (max-width: 600px) {
