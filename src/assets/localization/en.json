@@ -15,7 +15,7 @@
         "goodbye-text": "Thank you for visiting my website. If you have any questions, please contact me with the form on the side!",
         "name": "name",
         "content": "content",
-        "email": "email",
+        "email": "email (as CC)",
         "sendmail": "Send mail"
     }
 }

@@ -15,7 +15,7 @@
         "goodbye-text": "Kiitos että vierailit sivuillani. Jos olet kiinnostunut yhteistyöstä, otathan yhteyttä lomakkeella.",
         "name": "Nimi",
         "content": "Sisältö",
-        "email": "Sähköposti",
+        "email": "Sähköposti (CC:nä)",
         "sendmail": "Lähetä"
     }
 }
