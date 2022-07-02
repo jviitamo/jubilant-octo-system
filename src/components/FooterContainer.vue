@@ -9,7 +9,9 @@
                 <input type="text" v-model="content" :placeholder="a('footer', 'content', lang)"><br>
                 <input type="text" v-model="email" :placeholder="a('footer', 'email', lang)">
                 <button @click.prevent="sendMail(this.name, this.content, this.email)">{{ a('footer', 'sendmail', lang) }}</button>
-                <p>{{ this.showMessage }}</p>
+                <div :class="this.formSent ? 'success' : 'failure'">
+                    <p>{{ this.showMessage }}</p>
+                </div>
             </form>
         </div>
     </section>
@@ -27,7 +29,8 @@ export default {
         name: "",
         content: "",
         email: "",
-        showMessage: ""
+        showMessage: "",
+        formSent: false
     }
   },
   props: {
@@ -35,6 +38,10 @@ export default {
   },
   methods: {
     sendMail(name, content, email) {
+        if (name === "" || content === "" || email === "") {
+            this.formSent = false
+            this.showMessage = a('messages', 'fillAll', this.lang)
+        } else {
         axios({
             method: 'post',
             url: process.env.VUE_APP_API,
@@ -46,18 +53,22 @@ export default {
         })
         .then(data => {
             if (data.data.message.includes("Error sending order confirmation email or name")) {
-                this.showMessage = "Incorrect email address"
-            } else this.showMessage = "Message sent successfully"
+                    this.showMessage = a('messages', 'email', this.lang)
+                    this.formSent = false
+                } else  {
+                    this.showMessage = a('messages', 'success', this.lang)
+                    this.formSent = true
+                    this.name = ""
+                    this.content = ""
+                    this.email = ""
+                }
         })
         .catch(error => {
             console.log(error)
-            this.showMessage = "Something went from with making the request"
+                this.showMessage = a('messages', 'error', this.lang)
+                this.formSent = false
+            })
         }
-        )
-
-    this.name = ""
-    this.content = ""
-    this.email = ""
     setTimeout(() => {
         this.showMessage = ""
     }, 5000);
@@ -70,6 +81,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    .success {
+        color: green;
+    }
+    .failure {
+        color: red;
+    }
     .footer {
         font-size: 24px;
         margin: 0 150px;
@@ -98,6 +115,9 @@ export default {
         box-sizing: border-box;
         margin: 5px;
         font-size: 18px;
+    }
+    form > div {
+        text-align: center;
     }
     button {
         padding: 1em;

@@ -17,5 +17,11 @@
         "content": "content",
         "email": "email (as CC)",
         "sendmail": "Send mail"
+    },
+    "messages": {
+        "fillAll": "Please fill all the inputs",
+        "email": "Incorrect email address",
+        "success": "Message sent successfully",
+        "error": "Something went from with making the request"
     }
 }

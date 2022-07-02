@@ -17,5 +17,11 @@
         "content": "Sisältö",
         "email": "Sähköposti (CC:nä)",
         "sendmail": "Lähetä"
+    },
+    "messages": {
+        "fillAll": "Täytäthän kaikki kentät",
+        "email": "Väärä sähköpostiosoite",
+        "success": "Sähköposti lähetetty onnistuneesti",
+        "error": "Jotain meni pieleen sähköpostin lähetyksessä"
     }
 }
