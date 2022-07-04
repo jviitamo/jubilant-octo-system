@@ -45,6 +45,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
     .languageselector {
         position: absolute;
         right: 15px;
@@ -87,6 +92,7 @@ export default {
         text-align: center;
         font-size: 70px;
         height: 50vh;
+        animation: fadein 4s;
     }
 
     .images-container {

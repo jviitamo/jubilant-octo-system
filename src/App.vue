@@ -1,21 +1,14 @@
 <template>
-  <Header @changeLanguage="this.changeLanguage" :lang="this.language" />
-  <Competences :lang="this.language" />
-  <FooterContainer :lang="this.language"/>
+  <router-view/>
 </template>
 
 <script>
 
-import Header from './components/Header.vue'
-import Competences from './components/Competences.vue'
-import FooterContainer from './components/FooterContainer.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
-    Competences,
-    FooterContainer
+
   },
   // state
   data() {
