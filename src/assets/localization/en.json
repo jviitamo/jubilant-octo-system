@@ -23,5 +23,12 @@
         "email": "Incorrect email address",
         "success": "Message sent successfully",
         "error": "Something went from with making the request"
+    },
+    "desc-text": {
+        "content-text1": "I have a strong interest in software development, which comes from my mathematical thinking and logical reasoning skills. I like difficult puzzles and solving things. As a result, I have ended up coding in my studies, at work and in my free time. Of the languages, I'm most focused on Javascript and specifically Vue. I've also used Kotlin, Scala and Python.",
+        "content-text2": "In my studies, my software background is focused on algorithms, while my hobby projects are more focused on the frontend side. My projects have included my own website, a summer cottage diary, and a pwa application that helps with sorting. In my work I have coded web-based full-stack applications. I have also used my coding skills in a CTO position in my subject organization. Projects in this role have included developing event registration software, deploying election voting software, and developing and deploying a snack buying system.",
+        "content-text3": "I am interested in consulting because of its versatility. Consulting gives you the opportunity to see many different clients and sectors, and to challenge yourself in many different areas. The best thing about consulting is meeting the client's needs and seeing your handprint in the client's business.",
+        "content-text4": "I have experience in consulting from two different positions. I was a junior IT consultant at Oikeat Oliot Oy, and I am currently a solutions consultant at Efecte Oy. As an IT consultant, I was responsible for implementing full-stack applications and identifying customer needs. The best part of the job was thinking about what features were needed and what is the best way to implement them. ",
+        "content-text5": "At Efecte, I have been even more involved with the customer as a solution consultant. I have implemented several client projects and have been responsible for multiple clients, either alone or with other consultants. I have carried out various projects related to automation of the client's business."
     }
 }

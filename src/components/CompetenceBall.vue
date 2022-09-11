@@ -72,8 +72,8 @@ export default {
     .overlay {
         background-color: white;
         opacity: 1 !important;
-        height: 50%;
-        width: 50%;
+        height: 60%;
+        width: 60%;
         border-radius: 2em;
     }
     .closebutton {

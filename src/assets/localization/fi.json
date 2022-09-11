@@ -23,5 +23,12 @@
         "email": "Väärä sähköpostiosoite",
         "success": "Sähköposti lähetetty onnistuneesti",
         "error": "Jotain meni pieleen sähköpostin lähetyksessä"
+    },
+    "desc-text": {
+        "content-text1": "Olen erittäin kiinnostunut ohjelmistokehityksestä, joka on lähtöisin matemaattisesta ajattelustani ja loogisestä päättelykyvystäni. Tykkään vaikeista pulmista ja asioiden ratkaisemisesta. Sen seurauksena olen päätynyt koodaamaan niin opinnoissa, työssä kuin vapaa-ajallanikin. Kielistä eniten olen keskittynyt Javascriptin ja sen ympärillä Vueen. Lisäksi olen käyttänyt Kotlinia, Scalaa ja Pythonia.",
+        "content-text2": "Opinnoissani ohjelmistotaustani keskittyy algoritmeihin, kun taas vapaa-ajan projektit ovat keskittyneet enemmän frontend-puolelle. Projektejani ovat olleet muun muassa omat nettisivut, mökkipäiväkirja, ja lajittelussa auttava pwa-sovellus. Työssäni olen koodannut verkkopohjaisia full-stack -sovelluksia. Lisäksi olen käyttänyt koodaustaitojani CTO:n positiossa ainejärjestössäni. Tässä tehtävässä projekteja ovat olleet muun muassa tapahtumiin rekisteröintiohjelmiston kehittäminen, vaaliäänestysohjelmiston käyttönotto sekä namubufferin kehitys ja käyttöönotto.",
+        "content-text3": "Olen kiinnostunut konsultoinnista sen monipuolisuuden takia. Konsultoinnissa pääsee näkemään monia eri asiakkaita ja aloja, sekä haastamaan itseään monella alueella. Parasta konsultoinnissa on asiakkaan tarpeiden täyttäminen ja oman käden jäljen näkyminen asiakkaan liiketoiminnassa.",
+        "content-text4": "Minulla on kokemusta konsultoinnista kahdesta eri positioista. Oikeat Oliot Oy:llä olin nuorempi tietotekniikkakonsultti, ja nykyään olen ratkaisukonsultti Efecte Oy:llä. Tietotekniikkakonsulttina vastasin full-stack sovellusten toteuttamisesta sekä asiakastarpeiden selvittämisestä. Parasta työssä oli miettiä, miten ominaisuuksia tarvitaan ja miten ne kannattaisi parhaiten toteuttaa. ",
+        "content-text5": "Efectellä olen toiminut ratkaisukonsulttina vielä enemmän asiakasrajapinnassa. Olen toteuttanut useita asiakasprojekteja ja olen vastuussa useista asiakkaista yksin tai muiden konsulttien kanssa. Olen toteuttanut erilaisia asiakkaan liiketoiminnan automatisointiin liittyviä projekteja."
     }
 }
