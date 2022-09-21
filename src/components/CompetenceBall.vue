@@ -75,6 +75,12 @@ export default {
         max-height: 60%;
         width: 60%;
         border-radius: 2em;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .overlay::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
     }
     .closebutton {
         position: relative;
