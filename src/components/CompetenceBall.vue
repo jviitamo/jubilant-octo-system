@@ -2,7 +2,7 @@
     <div class="ball" :style="{backgroundColor: color}" @click="showPopup()">
       <p>{{ msg }}</p>
     </div> 
-    <div class="overlay-container" :style="[!this.Popup ? 'display: none' : '']">
+    <div class="overlay-container" :style="[!this.Popup ? 'display: none' : '']" @click.self="showPopup()">
       <div class="overlay">
           <div @click="showPopup()" class="closebutton">X</div>
           <slot />
@@ -72,9 +72,15 @@ export default {
     .overlay {
         background-color: white;
         opacity: 1 !important;
-        height: 60%;
+        max-height: 60%;
         width: 60%;
         border-radius: 2em;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .overlay::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
     }
     .closebutton {
         position: relative;
@@ -88,7 +94,7 @@ export default {
     }
     @media screen and (max-width: 1050px) {
       .overlay {
-          height: 70%;
+          max-height: 70%;
           width: 70%;
       }
     }
@@ -100,7 +106,7 @@ export default {
     }
     @media screen and (max-width: 600px) {
       .overlay {
-          height: 80%;
+          max-height: 80%;
           width: 90%;
       }
       .ball {

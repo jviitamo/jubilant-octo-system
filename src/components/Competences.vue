@@ -5,43 +5,43 @@
         <section class="competences">
             <CompetenceBall :msg="a('content', 'software', lang)" color="#145364">
                 <div class="ballcontent">
-                    <div class="description-text">
-                        <p> {{ a('desc-text', 'content-text1', lang) }}</p>
-                        <p> {{ a('desc-text', 'content-text2', lang) }}</p>
+                    <div class="description">
+                        <div class="description-text">
+                            <p> {{ a('desc-text', 'content-text1', lang) }}</p>
+                            <p> {{ a('desc-text', 'content-text2', lang) }}</p>
+                        </div>
                     </div>
                 </div>
             </CompetenceBall>
             <CompetenceBall :msg="a('content', 'consulting', lang)" color="#FD703B">
                 <div class="ballcontent">
-                    <div class="description-text">
-                        <p> {{ a('desc-text', 'content-text3', lang) }}</p>
-                        <p> {{ a('desc-text', 'content-text4', lang) }}</p>
-                        <p> {{ a('desc-text', 'content-text5', lang) }}</p>
+                    <div class="description">
+                        <div class="description-text">
+                            <p> {{ a('desc-text', 'content-text3', lang) }}</p>
+                            <p> {{ a('desc-text', 'content-text4', lang) }}</p>
+                            <p> {{ a('desc-text', 'content-text5', lang) }}</p>
+                        </div>
                     </div>
                 </div>
             </CompetenceBall>
             <CompetenceBall :msg="a('content', 'servers', lang)" color="#fd9a3b">
                 <div class="ballcontent">
-                    <div class="description-text">
-                        <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
-                        <p>I have been coding backend with Java, Kotlin and Scala. On the other hand I fluent with React and Vue.</p>
-                        <p>My work experience around software development includes CTO position at my student guild and IT-consultant at Oikeat Oliot Oy.</p>
+                    <div class="description">
+                        <div class="description-text">
+                            <p> {{ a('desc-text', 'content-text6', lang) }}</p>
+                            <p> {{ a('desc-text', 'content-text7', lang) }}</p>
+                            <p> {{ a('desc-text', 'content-text8', lang) }}</p>
+                        </div>
                     </div>
                 </div>
             </CompetenceBall>
             <CompetenceBall :msg="a('content', 'photography', lang)" color="#FDCA3B">
                 <div class="ballcontent">
-                    <div class="description-text">
-                        <p>I have been studying information networks, which is heavily focused around software development. In addition, my own interests have been moving myself towards programming.</p>
-                        <p>I have been coding backend with Java, Kotlin and Scala. On the other hand I fluent with React and Vue.</p>
-                        <p>My work experience around software development includes CTO position at my student guild and IT-consultant at Oikeat Oliot Oy.</p>
-                    </div>
-                    <div class="languages-container">
-                        <p>Vue</p>
-                        <p>React</p>
-                        <p>Kotlin/Java</p>
-                        <p>Scala</p>
-                        <p>Python</p>
+                    <div class="description">
+                        <div class="description-text">
+                            <p> {{ a('desc-text', 'content-text9', lang) }}</p>
+                            <p> {{ a('desc-text', 'content-text10', lang) }}</p>
+                        </div>
                     </div>
                 </div>
             </CompetenceBall>
@@ -116,13 +116,17 @@ export default {
     .ballcontent {
         display: flex;
         flex-direction: column;
-        align-items: center;
         height: 90%;
         padding: 30px 40px;
         overflow: hidden;
     }
-    .description-text {
+    .description {
+        display: flex;
+        flex-direction: row;
         overflow-y: scroll;
+    }
+    .description-text {
+        font-size: 24px;
     }
 
     ::-webkit-scrollbar {
