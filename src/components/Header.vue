@@ -16,11 +16,6 @@
                 <a href="https://github.com/jviitamo/" target="a_blank"><img src="../assets/linkedin.png" /></a>
                 <a href="https://www.instagram.com/juhanaviitamophotography/" target="a_blank"> <img src="../assets/instagram.png" /></a>
             </div>
-            <div class="cv-link">
-                <a href="resume.pdf" download>
-                    <p>{{ a("header", "cv", lang) }}</p>
-                </a>
-            </div>
         </div>
      </div>
  </div>

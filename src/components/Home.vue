@@ -1,7 +1,5 @@
 <template>
     <Header @changeLanguage="this.changeLanguage" :lang="this.language" />
-    <Competences :lang="this.language" />
-    <FooterContainer :lang="this.language"/>
 </template>
 
 <script>
